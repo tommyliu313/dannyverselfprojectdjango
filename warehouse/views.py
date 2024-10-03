@@ -34,12 +34,14 @@ def show_region(request, region_name):
 #    context = {'warehouse': variable}
 #    return render(request, 'warehouse/warehouse.html', context)
 
-def process_order(request):
+def processorder(request):
     if request.method == "POST":
         start_calendar = request.POST['startcalendar']
         end_calendar = request.POST['endcalendar']
         rentchoose = request.POST['rent_choose']
+        title = request.POST['title']
+        note = request.POST['note']
     else:
-        pass
+        return render(request,'pages/exception/error_404.html') 
         
                
