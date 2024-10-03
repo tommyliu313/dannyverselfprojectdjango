@@ -61,7 +61,23 @@
           <input type="hidden" name="user_id" value="0" />
           {% endif %}
           <div class="form-group">
-              <label for="warehouse_name" class="col-form-label">Warehouse:</label>
+            <label for="warehouse_name" class="col-form-label">Your User ID:</label>
+            <input
+              type="text"
+              value="{{user.id}}"
+              class="form-control"
+              name="userid"
+              disabled
+            />
+            <label for="warehouse_id" class="col-form-label">Warehouse ID:</label>
+            <input
+              type="text"
+              value="{{warehouse.id}}"
+              class="form-control"
+              name="idnum"
+              disabled
+            />
+              <label for="warehouse_title" class="col-form-label">Warehouse Name:</label>
               <input
                 type="text"
                 value="{{warehouse.title}}"
