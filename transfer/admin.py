@@ -3,7 +3,7 @@ from .models import Transfer
 # Register your models here.
 
 class TransferAdmin(admin.ModelAdmin):
-    list_display = ('id','user','is_active','warehouse','rent_date', 'rent_date','end_date')
+    list_display = ('id','user','is_active','warehouse','rent_date','end_date','rent_paid')
     list_display_links = ('id','user')
     list_filter = ('rent_date',)
     list_editable = ('is_active','rent_date','end_date')
