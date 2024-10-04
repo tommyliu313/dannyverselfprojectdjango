@@ -10,9 +10,9 @@ from django.contrib import auth
 # return to dashboard, show his information and record
 @login_required
 def dashboard(request):
-    #transfer_rec = Transfer.objects().all()
-    #context = {'transfer': transfer_rec}
-    return render(request, 'user/dashboard.html')
+    transfer_rec = Transfer.objects.all()
+    context = {'transfer': transfer_rec}
+    return render(request, 'user/dashboard.html', context)
 
 
 def login(request):

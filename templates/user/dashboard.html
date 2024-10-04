@@ -37,18 +37,24 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">1</th>
-                    <th scope="col">2</th>
-                    <th scope="col">3</th>
+                    <th scope="col">Warehouse Title</th>
+                    <th scope="col">Rent Date</th>
+                    <th scope="col">End Date</th>
+                    <th scope="col">Rent Paid</th>
+                    <th scope="col">Note</th>
                 </tr>
             </thead>
             <tbody>
+                {% for transfer_board in transfer %}
                 <tr>
                     <th scope="row"></th>
-                    <td>{{transfer.id}}</td>
-                    <td>{{warehouse.title}}</td>
-                    <td>{{transfer.rent_paid}}</td>
+                    <td>{{transfer_board.warehouse}}</td>
+                    <td>{{transfer_board.rent_date}}</td>
+                    <td>{{transfer_board.end_date}}</td>
+                    <td>{{transfer_board.rent_paid}}</td>
+                    <td>{{transfer_board.note}}</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
         <nav aria-label="Page navigation example">

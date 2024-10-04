@@ -23,7 +23,7 @@ class Warehouse(models.Model):
     slug = AutoSlugField(populate_from='title',unique=True, null=True, default=None)
     
     def __str__(self):
-        return self.title
+        return str(self.title)
     
     def slugify_function(self, content):
         return content.replace('_', '-').lower()

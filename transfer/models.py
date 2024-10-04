@@ -10,6 +10,7 @@ class Transfer(models.Model):
     end_date = models.DateTimeField()
     rent_paid = models.FloatField()
     is_active = models.BooleanField(default=True)
+    note = models.TextField(null=True)
     
     def __str__(self):
-        return self.warehouse    
+        return str(self.warehouse)    
